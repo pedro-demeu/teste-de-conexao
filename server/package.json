@@ -1,0 +1,19 @@
+{
+  "name": "node-server-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple Node.js + Express boilerplate project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "speedtest-net": "^2.2.0"
+  },
+  "author": "Pedro Demeu",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
