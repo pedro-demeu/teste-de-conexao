@@ -1,19 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const speedTest = require("speedtest-net");
-
 const app = express();
+const PORT = 3000;
+
 app.use(cors());
 app.use(express.json());
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000!");
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}!`);
 });
 
 app.get("/teste-de-conexao", async (req, res) => {
   try {
     const response = await speedTest({ acceptLicense: true, acceptGdpr: true });
-
     return res.status(200).json(response);
   } catch (error) {
     console.error("Speed test error:", error.message);
